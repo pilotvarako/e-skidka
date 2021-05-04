@@ -1,1 +1,52 @@
+.logo {
+    margin-left: 25px;
+    width: 150px;
+    display: inline-block;
+}
+
+.button_entry {
+    display: inline-block;
+    margin-left: 70%;
+    position: absolute;
+}
+
+.button_entry button {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    width: 125px;
+    font-size: 20px;
+    height: 30px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.button_entry button:hover {
+    background-color: #AF4FFB;
+}
+
+.button_registry {
+    display: inline-block;
+    margin-left: 80%;
+    position: absolute;
+}
+
+.button_registry button {
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    width: 150px;
+    font-size: 20px;
+    height: 30px;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.button_registry button:hover {
+    background-color: #AF4FFB;
+}
+
+.line hr {
+    border: 1px solid #6F6F6F;
+}
 

@@ -11,10 +11,10 @@
             <a href="/"><img src="img/logo.svg" alt="Logo"/></a>
         </div>
         <div class="button_entry">
-            <p><button>Вход</button></p>
+            <a href="/"><p><button>Вход</button></p></a>
         </div>
         <div class="button_registry">
-            <p><button>Регистрация</button></p>
+            <a href="/"><p><button>Регистрация</button></p></a>
         </div>
         <div class="line">
             <hr>
