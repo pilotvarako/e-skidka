@@ -16,7 +16,7 @@ body {
     display: inline-block;
 }
 
-.button_entry {
+.button_entry, .user_profile {
     display: inline-block;
     margin-left: 70%;
     margin-top: 25px;
@@ -38,7 +38,7 @@ body {
     background-color: #AF4FFB;
 }
 
-.button_registry {
+.button_registry, .exit_profile {
     display: inline-block;
     margin-left: 80%;
     margin-top: 25px;
