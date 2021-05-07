@@ -33,7 +33,15 @@
         </nav>
     </header>
     <main>
-        <div class="banner"></div>
+        <div class="banner">
+            <div class="title_banner"><h1>Простой инструмент для экономии денежных средств</h1></div>
+            <div class="banner_logo"><img src="img/banner_main_logo.svg" alt="Main banner"/></div>
+            <div class="item_registry"><img src="img/banner_registry.svg" alt="Logo registry"/><p>Регистрируйтесь</p></div>
+            <div class="item_pointer_first"><img src="img/banner_icon_right.svg" alt="Icon right"/></div>
+            <div class="item_coupon"><img src="img/banner_click_logo.svg" alt="Icon click"/><p>Выбирайте купон</p></div>
+            <div class="item_pointer_second"><img src="img/banner_icon_right.svg" alt="Icon right"/></div>
+            <div class="item_link"><img src="img/banner_link_coupon.svg" alt="Icon link"/><p>Переходите на сайт магазина по купону</p></div>
+        </div>
     </main>
     <footer>
         <div class="line">

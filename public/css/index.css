@@ -102,11 +102,73 @@ body {
 /* main */
 
 .banner {
-    height: 500px;
+    height: 300px;
+    width: 100%;
     background-color: #AF4FFB;
 }
 
+.title_banner h1 {
+    font-weight: normal;
+    padding-left: 30px;
+    padding-top: 30px;
+    position: absolute;
+}
+
+.banner_logo {
+    display: inline-block;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: -20px;
+}
+
+.item_registry {
+    display: inline-block;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 150px;
+}
+
+.item_registry p, .item_coupon p, .item_link p {
+    font-weight: bold;
+}
+
+.item_pointer_first {
+    display: inline-block;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 155px;
+}
+
+.item_coupon {
+    display: inline-block;
+    position: absolute;
+    margin-left: 320px;
+    margin-top: 135px;
+}
+
+.item_pointer_second {
+    display: inline-block;
+    position: absolute;
+    margin-left: 470px;
+    margin-top: 155px;
+}
+
+.item_link img {
+    display: inline-block;
+    position: absolute;
+    margin-left: 610px;
+    margin-top: 147px;
+}
+
+.item_link p {
+    display: inline-block;
+    position: absolute;
+    margin-left: 550px;
+    margin-top: 250px;
+}
+
 /* footer */
+
 .support {
     display: inline-block;
     position: absolute;
