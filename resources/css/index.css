@@ -18,7 +18,7 @@ body {
 
 .button_entry, .user_profile {
     display: inline-block;
-    margin-left: 70%;
+    margin-left: 1325px;
     margin-top: 25px;
     position: absolute;
 }
@@ -40,7 +40,7 @@ body {
 
 .button_registry, .exit_profile {
     display: inline-block;
-    margin-left: 80%;
+    margin-left: 1525px;
     margin-top: 25px;
     position: absolute;
 }
@@ -95,7 +95,7 @@ body {
 
 .mnogo_skidok {
     display: inline-block;
-    margin-left: 33%;
+    margin-left: 625px;
     margin-top: 6px;
 }
 
@@ -117,7 +117,7 @@ body {
 .banner_logo {
     display: inline-block;
     position: absolute;
-    margin-left: 70%;
+    margin-left: 1330px;
     margin-top: -20px;
 }
 
@@ -167,12 +167,194 @@ body {
     margin-top: 250px;
 }
 
+.items_shop {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 320px;
+}
+
+.item_shop {
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #AF4FFB;
+    margin-top: 50px;
+    margin-left: 775px;
+    padding: 50px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.button_all_coupons {
+    box-sizing: border-box;
+    margin-left: 750px;
+    margin-top: 90px;
+}
+
+.button_all_coupons a {
+    text-decoration: none;
+}
+
+.button_all_coupons button {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #AF4FFB;
+    padding-left: 15px;
+    padding-top: 7px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.button_all_coupons p {
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+.button_all_coupons button:hover {
+    background-color: #000000;
+    border: 1px solid #AF4FFB;
+    color: #AF4FFB;
+    font-weight: bold;
+}
+
+.additional_tools {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 320px;
+    background-color: #AF4FFB;
+}
+
+.additional_tools h3, .action_service h3 {
+    padding-top: 30px;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.additional_tools h3 {
+    padding-left: 700px;
+}
+
+.items_tool {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.item_smart_form, .item_mnogo_skidok {
+    width: 440px;
+    height: 220px;
+    background-color: #FFFFFF;
+    border: 3px groove #6F6F6F;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+.item_smart_form {
+    margin-left: 50px;
+}
+
+.item_smart_form img {
+    margin-left: 180px;
+    margin-top: 15px;
+}
+
+.item_smart_form p, .item_mnogo_skidok p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.transition_tools {
+    padding-left: 325px;
+    padding-top: 100px;
+}
+
+.item_mnogo_skidok {
+    margin-left: 300px;
+}
+
+.item_mnogo_skidok img {
+    margin-left: 145px;
+    margin-top: 15px;
+}
+
+.action_service {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 180px;
+}
+
+.action_service h3 {
+    padding-left: 500px;
+}
+
+.action_buttons {
+    box-sizing: border-box;
+    display: flex;
+}
+
+.button_action_registry {
+    margin-left: 375px;
+    margin-top: 30px;
+}
+
+.button_action_registry a, .button_action_entry a {
+    text-decoration: none;
+}
+
+.button_action_registry button, .button_action_entry button {
+    display: flex;
+    background-color: #FFFFFF;
+    border: 1px solid #AF4FFB;
+    color: #AF4FFB;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.button_action_registry button {
+    width: 240px;
+    height: 60px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.button_action_registry p {
+    padding-left: 25px;
+    padding-top: 13px;
+}
+
+.button_action_registry button:hover, .button_action_entry button:hover {
+    background-color: #000000;
+    border: 1px solid #000000;
+    font-weight: bold;
+}
+
+.button_action_entry {
+    margin-left: 500px;
+    margin-top: 30px;
+}
+
+.button_action_entry button {
+    width: 210px;
+    height: 60px;
+    padding-left: 12px;
+    padding-top: 8px;
+}
+
+.button_action_entry p {
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
 /* footer */
 
 .support {
     display: inline-block;
     position: absolute;
-    margin-left: 65%;
+    margin-left: 1225px;
     margin-top: 30px;
 }
 
