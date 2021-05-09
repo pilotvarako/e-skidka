@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [MainController::class, 'index']);
+Route::get('/coupons', [MainController::class, 'plug']);
+Route::get('/smart-form', [MainController::class, 'plug']);
+Route::get('/registration', [MainController::class, 'plug']);
+Route::get('/authorization', [MainController::class, 'plug']);
+Route::get('/profile', [MainController::class, 'plug']);
