@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="verify-admitad" content="d00efc34aa" />
         <title>E-skidka</title>
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
     </head>
