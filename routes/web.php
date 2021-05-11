@@ -14,9 +14,9 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('/', [MainController::class, 'index']);
-Route::get('/coupons', [MainController::class, 'plug']);
-Route::get('/smart-form', [MainController::class, 'plug']);
-Route::get('/registration', [MainController::class, 'plug']);
-Route::get('/authorization', [MainController::class, 'plug']);
-Route::get('/profile', [MainController::class, 'plug']);
+Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/coupons', [MainController::class, 'plug'])->name('coupons');
+Route::get('/smart-form', [MainController::class, 'plug'])->name('smart-form');
+Route::get('/registration', [MainController::class, 'plug'])->name('registration');
+Route::get('/authorization', [MainController::class, 'plug'])->name('authorization');
+Route::get('/profile', [MainController::class, 'plug'])->name('profile');

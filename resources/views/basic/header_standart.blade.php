@@ -1,12 +1,12 @@
 <header>
     <div class="logo">
-        <a href="/"><img src="img/logo.svg" alt="Logo"/></a>
+        <a href="{{ route('index') }}"><img src="img/logo.svg" alt="Logo"/></a>
     </div>
     <div class="button_entry">
-        <a href="/authorization"><p><button>Вход</button></p></a>
+        <a href="{{ route('authorization') }}"><p><button>Вход</button></p></a>
     </div>
     <div class="button_registry">
-        <a href="/registration"><p><button>Регистрация</button></p></a>
+        <a href="{{ route('registration') }}"><p><button>Регистрация</button></p></a>
     </div>
     <div class="line">
         <hr>
@@ -14,9 +14,9 @@
     <nav>
         <div class="header_menu">
             <ul>
-                <a href="/coupons"><li><img src="img/coupon_logo.svg" alt="Coupon"/><p>Купоны</p></li></a>
-                <a href="/smart-form"><li><img src="img/smart_form_logo.svg" alt="Smart form"/><p>Smart форма</p></li></a>
-                <a href="/"><li><img src="img/service_logo.svg" alt="Service"/><p>О сервисе</p></li></a>
+                <a href="{{ route('coupons') }}"><li><img src="img/coupon_logo.svg" alt="Logo"/><p>Купоны</p></li></a>
+                <a href="{{ route('smart-form') }}"><li><img src="img/smart_form_logo.svg" alt="Logo"/><p>Smart форма</p></li></a>
+                <a href="{{ route('index') }}"><li><img src="img/service_logo.svg" alt="Logo"/><p>О сервисе</p></li></a>
             </ul>
         </div>
         <div class="mnogo_skidok">
