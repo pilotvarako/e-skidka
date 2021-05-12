@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>E-skidka</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-</head>
-<body>
+@extends('layouts.master')
 
-@include('basic.header_standart')
+@section('title', 'В разработке')
 
-<main>
+@section('content')
     <div class="banner_plug">
         <h2>В разработке...</h2>
     </div>
-</main>
-
-@include('basic.footer')
-
-</body>
-</html>
+@endsection
