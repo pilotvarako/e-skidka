@@ -13,4 +13,12 @@ class MainController extends Controller
     public function plug() {
         return view('plug');
     }
+
+    public function register() {
+        return view('register');
+    }
+
+    public function login() {
+        return view('login');
+    }
 }
