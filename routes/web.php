@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,15 @@ use App\Http\Controllers\MainController;
 |
 */
 
+Auth::routes([
+    'reset' => false,
+    'confirm' => false,
+    'verify' => false,
+]);
+
 Route::get('/', [MainController::class, 'index'])->name('index');
 Route::get('/coupons', [MainController::class, 'plug'])->name('coupons');
 Route::get('/smart-form', [MainController::class, 'plug'])->name('smart-form');
-Route::get('/register', [MainController::class, 'register'])->name('register');
-Route::get('/login', [MainController::class, 'login'])->name('login');
-Route::get('/profile', [MainController::class, 'plug'])->name('profile');
+
+Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('get-logout');

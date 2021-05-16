@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     @stack('meta')
     <title>@yield('title')</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    @stack('css')
 </head>
 <body>
 

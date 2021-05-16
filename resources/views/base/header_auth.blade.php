@@ -6,7 +6,7 @@
         <a href="{{ route('profile') }}"><img src="img/main/user_auth_logo.svg" alt="Profile"/></a>
     </div>
     <div class="exit_profile">
-        <a href="{{ route('index') }}"><img src="img/main/exit_logo.svg" alt="Exit"/></a>
+        <a href="{{ route('get-logout') }}"><img src="img/main/exit_logo.svg" alt="Exit"/></a>
     </div>
     <div class="line">
         <hr>

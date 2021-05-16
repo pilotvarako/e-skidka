@@ -2,6 +2,10 @@
 
 @section('title', 'Авторизация')
 
+@prepend('css')
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+@endprepend
+
 @section('content')
     <div class="login_scope">
         <div class="title_logo"><img src="img/auth/login_logo.svg" alt="Login logo"/></div>

@@ -4,6 +4,10 @@
     <meta name="verify-admitad" content="d00efc34aa" />
 @endprepend
 
+@prepend('css')
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+@endprepend
+
 @section('title', 'E-skidka')
 
 @section('content')
