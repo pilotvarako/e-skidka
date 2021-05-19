@@ -27,10 +27,11 @@ class HomeController extends Controller
         $api = new Api();
         $clientId = 'MJLauu2ApEHPPNXol7T1Bk58wuHoDv';
         $clientSecret = 'c6TIaRJXBwM15ZeWvc3HfkebfGzHyV';
-        $scope = 'private_data';
+        $scope = 'private_data' . ' ' . 'coupons';
         $response = $api->selfAuthorize($clientId, $clientSecret, $scope);
-        $result = $response->getLastResponse()->getArrayResult();
-        dd($result);
+        //dd($response->getLastResponse()->getResult());
+        $response = $api->get('/coupons/')->getArrayResult();
+        dd($response);
         return view('plug');
     }
 }
