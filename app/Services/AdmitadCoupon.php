@@ -19,7 +19,7 @@ class AdmitadCoupon
         if (is_null($current_service->getLast())) {
             $clientId = 'MJLauu2ApEHPPNXol7T1Bk58wuHoDv';
             $clientSecret = 'c6TIaRJXBwM15ZeWvc3HfkebfGzHyV';
-            $scope = 'public_data' . ' ' . 'websites';
+            $scope = 'public_data' . ' ' . 'websites' . ' ' . 'coupons_for_website';
             $response = $this->api->selfAuthorize($clientId, $clientSecret, $scope);
             $result = $response->getLastResponse()->getArrayResult();
             $response_website_id = $this->api->get('/websites/v2/');
@@ -49,10 +49,49 @@ class AdmitadCoupon
 
         catch (ApiException $ex) {
             $this->fixError($this->api->getLastResponse()->getArrayResult('error_code'));
+            $response = $this->api->get('/coupons/categories/');
         }
 
         return $response->getArrayResult('results');
     }
+
+    public function getCoupons() {
+        $current_service = new InfoService();
+        $current_service = $current_service->getLast();
+        $website_id = $current_service['website_id'];
+
+        $name_method = '/coupons/website/' . $website_id . '/';
+
+        try {
+            $response = $this->api->get($name_method);
+        }
+
+        catch (ApiException $ex) {
+            $this->fixError($this->api->getLastResponse()->getArrayResult('error_code'));
+            $response = $this->api->get($name_method);
+        }
+
+        return $response->getArrayResult('results');
+    }
+
+    /*public function getCoupon() {
+        $current_service = new InfoService();
+        $current_service = $current_service->getLast();
+        $website_id = $current_service['website_id'];
+
+        $name_method = '/coupons/376714/website/' . $website_id . '/';
+
+        try {
+            $response = $this->api->get($name_method);
+        }
+
+        catch (ApiException $ex) {
+            $this->fixError($this->api->getLastResponse()->getArrayResult('error_code'));
+        }
+
+        dd($response->getArrayResult());
+        return $response->getArrayResult('results');
+    }*/
 
     private function fixError($error_code) {
         $error_code === 0 ? $this->updateKey() : $this->dropKey();
@@ -81,7 +120,7 @@ class AdmitadCoupon
         $current_service = $current_service->getLast();
         $clientId = $current_service->decryptValue($current_service['client_id']);
         $clientSecret = $current_service->decryptValue($current_service['client_secret']);
-        $scope = 'public_data' . ' ' . 'websites';
+        $scope = 'public_data' . ' ' . 'websites' . ' ' . 'coupons_for_website';
         $response = $this->api->selfAuthorize($clientId, $clientSecret, $scope);
         $result = $response->getLastResponse()->getArrayResult();
         $response_website_id = $this->api->get('/websites/v2/');
