@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Admitad\Api\Api;
+use App\Services\AdmitadCoupon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CategorySeeder extends Seeder
 {
@@ -14,12 +15,8 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $api = new Api();
-        $clientId = 'MJLauu2ApEHPPNXol7T1Bk58wuHoDv';
-        $clientSecret = 'c6TIaRJXBwM15ZeWvc3HfkebfGzHyV';
-        $scope = 'public_data';
-        $api = $api->selfAuthorize($clientId, $clientSecret, $scope);
-        $response = $api->get('/coupons/categories/');
-        dd($response->getArrayResult('results'));
+        $admitad = new AdmitadCoupon();
+        $admitad_all_categories = $admitad->getCategories();
+        DB::table('categories')->insert($admitad_all_categories);
     }
 }
