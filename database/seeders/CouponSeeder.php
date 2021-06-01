@@ -16,7 +16,7 @@ class CouponSeeder extends Seeder
     public function run()
     {
         $admitad = new AdmitadCoupon();
-        $admitad_all_coupons = $admitad->getCoupons();
+        $admitad_all_coupons = $admitad->getCoupon();
         dd($admitad_all_coupons);
     }
 }

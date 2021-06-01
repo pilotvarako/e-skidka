@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Admitad\Api\Exception\ApiException;
+use Admitad\Api\Exception\Exception;
 use App\Models\InfoService;
 use Admitad\Api\Api;
 
@@ -74,7 +75,7 @@ class AdmitadCoupon
         return $response->getArrayResult('results');
     }
 
-    /*public function getCoupon() {
+    public function getCoupon() {
         $current_service = new InfoService();
         $current_service = $current_service->getLast();
         $website_id = $current_service['website_id'];
@@ -89,12 +90,21 @@ class AdmitadCoupon
             $this->fixError($this->api->getLastResponse()->getArrayResult('error_code'));
         }
 
-        dd($response->getArrayResult());
-        return $response->getArrayResult('results');
-    }*/
+        return $response->getArrayResult();
+    }
 
     private function fixError($error_code) {
-        $error_code === 0 ? $this->updateKey() : $this->dropKey();
+        if ($error_code === 0) {
+            $this->updateKey();
+        }
+
+        else if ($error_code === 1 || $error_code === 5) {
+            $this->dropKey();
+        }
+
+        else {
+            throw new Exception('Operation failed, error_code: ' . $error_code);
+        }
     }
 
     private function updateKey() {

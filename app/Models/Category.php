@@ -12,4 +12,8 @@ class Category extends Model
     protected $fillable = ['id', 'name'];
 
     public $incrementing = false;
+
+    public function coupons() {
+        return $this->hasMany(Coupon::class);
+    }
 }
