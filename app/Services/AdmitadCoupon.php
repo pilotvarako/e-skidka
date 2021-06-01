@@ -75,7 +75,7 @@ class AdmitadCoupon
         return $response->getArrayResult('results');
     }
 
-    public function getCoupon() {
+    /*public function getCoupon() {
         $current_service = new InfoService();
         $current_service = $current_service->getLast();
         $website_id = $current_service['website_id'];
@@ -91,7 +91,7 @@ class AdmitadCoupon
         }
 
         return $response->getArrayResult();
-    }
+    }*/
 
     private function fixError($error_code) {
         if ($error_code === 0) {
@@ -136,5 +136,25 @@ class AdmitadCoupon
         $response_website_id = $this->api->get('/websites/v2/');
         $result_website_id = $response_website_id->getArrayResult(0);
         $current_service->refreshService($current_service, $result['access_token'], $result['refresh_token'], $result_website_id['id']);
+    }
+
+    public function filterCoupons($coupons) {
+        $filter_coupon = array('id' => 0, 'category_id' => 0, 'name_company' => '', 'name' => '', 'discount' => '', 'image' => '', 'link' => '');
+        $result = array();
+
+        foreach ($coupons as $coupon) {
+            if ($coupon['status'] === 'active' && $coupon['promocode'] === 'НЕ НУЖЕН') {
+                $filter_coupon['id'] = $coupon['id'];
+                $filter_coupon['category_id'] = $coupon['categories'][0]['id'];
+                $filter_coupon['name_company'] = $coupon['campaign']['name'];
+                $filter_coupon['name'] = $coupon['name'];
+                $filter_coupon['discount'] = $coupon['discount'];
+                $filter_coupon['image'] = $coupon['image'];
+                $filter_coupon['link'] = $coupon['goto_link'];
+                $result[] = $filter_coupon;
+            }
+        }
+
+        return $result;
     }
 }

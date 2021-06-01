@@ -18,7 +18,7 @@ class CreateCouponsTable extends Migration
             $table->integer('category_id');
             $table->string('name_company');
             $table->string('name');
-            $table->string('discount');
+            $table->string('discount')->nullable();
             $table->text('image');
             $table->text('link');
             $table->timestamps();
