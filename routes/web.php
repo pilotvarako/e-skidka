@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\CouponController;
 use App\Http\Controllers\Auth\LoginController;
 
 /*
@@ -22,7 +23,8 @@ Auth::routes([
 ]);
 
 Route::get('/', [MainController::class, 'index'])->name('index');
-Route::get('/coupons', [MainController::class, 'plug'])->name('coupons');
+Route::get('/coupons', [CouponController::class, 'index'])->name('coupons');
+Route::post('/coupons', [CouponController::class, 'search'])->name('coupons');
 Route::get('/smart-form', [MainController::class, 'plug'])->name('smart-form');
 
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');

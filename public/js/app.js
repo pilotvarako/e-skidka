@@ -19087,6 +19087,19 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./resources/css/coupons.css":
+/*!***********************************!*\
+  !*** ./resources/css/coupons.css ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/css/app.css":
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
@@ -19474,7 +19487,8 @@ process.umask = function() { return 0; };
 /******/ 			"css/register": 0,
 /******/ 			"css/index": 0,
 /******/ 			"css/base": 0,
-/******/ 			"css/app": 0
+/******/ 			"css/app": 0,
+/******/ 			"css/coupons": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -19522,13 +19536,14 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app"], () => (__webpack_require__("./resources/css/base.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app"], () => (__webpack_require__("./resources/css/index.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app"], () => (__webpack_require__("./resources/css/register.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app"], () => (__webpack_require__("./resources/css/login.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app"], () => (__webpack_require__("./resources/css/plug.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app","css/coupons"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app","css/coupons"], () => (__webpack_require__("./resources/css/base.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app","css/coupons"], () => (__webpack_require__("./resources/css/index.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app","css/coupons"], () => (__webpack_require__("./resources/css/register.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app","css/coupons"], () => (__webpack_require__("./resources/css/login.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app","css/coupons"], () => (__webpack_require__("./resources/css/plug.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app","css/coupons"], () => (__webpack_require__("./resources/css/coupons.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/plug","css/login","css/register","css/index","css/base","css/app","css/coupons"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

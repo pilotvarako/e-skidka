@@ -24,12 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $api = new Api();
-        $clientId = 'MJLauu2ApEHPPNXol7T1Bk58wuHoDv';
-        $clientSecret = 'c6TIaRJXBwM15ZeWvc3HfkebfGzHyV';
-        $scope = 'public_data';
-        $response = $api->selfAuthorize($clientId, $clientSecret, $scope);
-        dd($response->getLastResponse()->getArrayResult());
         return view('plug');
     }
 }

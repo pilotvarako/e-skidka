@@ -16,4 +16,12 @@ class Coupon extends Model
     public function category() {
         return $this->belongsTo(Category::class);
     }
+
+    public function getCoupons() {
+        return Coupon::all();
+    }
+
+    public function getCouponsPaginate() {
+        return Coupon::paginate(10);
+    }
 }
