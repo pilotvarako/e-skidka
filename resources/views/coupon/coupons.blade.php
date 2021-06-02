@@ -16,15 +16,27 @@
         </form>
     </div>
     <div class="coupons_scope">
-        @foreach ($coupons as $coupon)
+        @forelse ($coupons as $coupon)
             <div class="item_coupon">
                 <div class="item_coupon_logo"><img src="{{ $coupon->image }}" alt="Image company"/></div>
                 <div class="item_coupon_name"><p>{{ $coupon->name }}</p></div>
-                <div class="item_coupon_link"><a href="{{ $coupon->link }}"><img src="img/coupons/link.svg" alt="Link logo"/></a></div>
+
+                @auth
+                    <div class="item_coupon_link"><a href="{{ $coupon->link }}"><img src="img/coupons/link.svg" alt="Link logo"/></a></div>
+                @endauth
+
+                @guest
+                    <div class="item_coupon_link"><a href="{{ route('login') }}"><img src="img/coupons/link.svg" alt="Link logo"/></a></div>
+                @endguest
+
             </div>
-        @endforeach
+            @empty
+                <div class="coupons_empty"><h2>Ничего не найдено по вашему запросу :(</h2></div>
+        @endforelse
     </div>
 
-    {{ $coupons->links() }}
+    @empty ($search)
+        {{ $coupons->links() }}
+    @endempty
 
 @endsection

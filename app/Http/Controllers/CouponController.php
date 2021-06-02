@@ -15,6 +15,10 @@ class CouponController extends Controller
     }
 
     public function search(Request $request) {
-        dd($request->input('search'));
+        $search = $request->input('search');
+        $coupons = new Coupon();
+        $coupons = $coupons->searchCoupons($search);
+
+        return view('coupon.coupons', ['coupons' => $coupons, 'search' => $search]);
     }
 }

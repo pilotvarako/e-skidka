@@ -24,4 +24,8 @@ class Coupon extends Model
     public function getCouponsPaginate() {
         return Coupon::paginate(10);
     }
+
+    public function searchCoupons($search) {
+        return Coupon::where('name', 'like', '%' . $search . '%')->orWhere('name_company', 'like', '%' . $search . '%')->get();
+    }
 }

@@ -88,3 +88,14 @@
     font-size: 20px;
 }
 
+.coupons_empty {
+    box-sizing: border-box;
+    height: 200px;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+.coupons_empty h2 {
+    color: #AF4FFB;
+}
+
