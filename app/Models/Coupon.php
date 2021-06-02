@@ -22,7 +22,7 @@ class Coupon extends Model
     }
 
     public function getCouponsPaginate() {
-        return Coupon::paginate(10);
+        return Coupon::paginate(12);
     }
 
     public function searchCoupons($search) {
