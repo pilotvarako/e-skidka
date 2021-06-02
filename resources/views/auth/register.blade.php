@@ -3,12 +3,12 @@
 @section('title', 'Регистрация')
 
 @prepend('css')
-    <link rel="stylesheet" type="text/css" href="css/register.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/register.css') }}"/>
 @endprepend
 
 @section('content')
     <div class="register_scope">
-        <div class="title_logo"><img src="img/auth/register_logo.svg" alt="Register logo"/></div>
+        <div class="title_logo"><img src="{{ asset('img/auth/register_logo.svg') }}" alt="Register logo"/></div>
         <div class="title_name"><h2>Регистрация</h2></div>
         <div class="form_scope_register">
             <form method="POST" action="{{ route('register') }}">

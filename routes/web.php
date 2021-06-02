@@ -27,6 +27,8 @@ Route::get('/', [MainController::class, 'index'])->name('index');
 Route::get('/coupons', [CouponController::class, 'index'])->name('coupons');
 Route::post('/coupons', [CouponController::class, 'search'])->name('coupons');
 Route::get('/smart-form', [SmartFormController::class, 'index'])->name('smart-form');
+Route::get('/smart-form/edit', [SmartFormController::class, 'edit'])->name('smart-form-edit');
+Route::post('/smart-form/edit', [SmartFormController::class, 'send'])->name('smart-form-edit');
 
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('get-logout');

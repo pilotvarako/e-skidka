@@ -18,4 +18,7 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/login.css', 'public/css')
     .postCss('resources/css/plug.css', 'public/css')
     .postCss('resources/css/coupons.css', 'public/css')
+    .postCss('resources/css/coupon.css', 'public/css')
+    .postCss('resources/css/smart_form.css', 'public/css')
+    .postCss('resources/css/smart_form_edit.css', 'public/css')
     .postCss('resources/css/app.css', 'public/css');

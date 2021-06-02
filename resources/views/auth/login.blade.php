@@ -3,12 +3,12 @@
 @section('title', 'Авторизация')
 
 @prepend('css')
-    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}"/>
 @endprepend
 
 @section('content')
     <div class="login_scope">
-        <div class="title_logo"><img src="img/auth/login_logo.svg" alt="Login logo"/></div>
+        <div class="title_logo"><img src="{{ asset('img/auth/login_logo.svg') }}" alt="Login logo"/></div>
         <div class="title_name"><h2>Войти в аккаунт</h2></div>
         <div class="form_scope_login">
             <form method="POST" action="{{ route('login') }}">

@@ -6,5 +6,8 @@
     "/css/index.css": "/css/index.css",
     "/css/base.css": "/css/base.css",
     "/css/app.css": "/css/app.css",
+    "/css/smart_form_edit.css": "/css/smart_form_edit.css",
+    "/css/smart_form.css": "/css/smart_form.css",
+    "/css/coupon.css": "/css/coupon.css",
     "/css/coupons.css": "/css/coupons.css"
 }

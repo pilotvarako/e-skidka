@@ -3,7 +3,7 @@
 @section('title', 'В разработке')
 
 @prepend('css')
-    <link rel="stylesheet" type="text/css" href="css/plug.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/plug.css') }}"/>
 @endprepend
 
 @section('content')

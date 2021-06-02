@@ -3,8 +3,9 @@
 @section('title', 'Купоны')
 
 @prepend('css')
-    <link rel="stylesheet" type="text/css" href="css/coupons.css"/>
-    <link rel="stylesheet" type="text/css" href="css/app.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/coupons.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/coupon.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}"/>
 @endprepend
 
 @section('content')
@@ -12,7 +13,7 @@
         <form method="POST" action="{{ route('coupons') }}">
             @csrf
             <div class="search_input"><input type="text" placeholder="Введите название" name="search" required /></div>
-            <div class="search_confirm"><button type="submit"><img src="img/coupons/search.svg" alt="Search"/></button></div>
+            <div class="search_confirm"><button type="submit"><img src="{{ asset('img/coupons/search.svg') }}" alt="Search"/></button></div>
         </form>
     </div>
     <div class="coupons_scope">
@@ -22,11 +23,11 @@
                 <div class="item_coupon_name"><p>{{ $coupon->name }}</p></div>
 
                 @auth
-                    <div class="item_coupon_link"><a href="{{ $coupon->link }}"><img src="img/coupons/link.svg" alt="Link logo"/></a></div>
+                    <div class="item_coupon_link"><a href="{{ $coupon->link }}"><img src="{{ asset('img/coupons/link.svg') }}" alt="Link logo"/></a></div>
                 @endauth
 
                 @guest
-                    <div class="item_coupon_link"><a href="{{ route('login') }}"><img src="img/coupons/link.svg" alt="Link logo"/></a></div>
+                    <div class="item_coupon_link"><a href="{{ route('login') }}"><img src="{{ asset('img/coupons/link.svg') }}" alt="Link logo"/></a></div>
                 @endguest
 
             </div>
