@@ -3,18 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\SmartFormQuestion;
 use App\Models\SmartFormUserAnswer;
-use App\Models\Coupon;
+use App\Models\User;
 
 class SmartFormController extends Controller
 {
-    public function index() {
-        $search = 'yvos';
-        $coupons = new Coupon();
-        $coupons = $coupons->searchCoupons($search);
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
-        return view('smart_form.index', ['coupons' => $coupons, 'search' => $search]);
+    public function index() {
+        if (count(auth()->user()->smartFormUserAnswers) === 0) {
+            $unused = true;
+
+            return view('smart_form.index', ['coupons' => [], 'unused' => $unused]);
+        }
+
+        $unused = false;
+        $coupons = User::findUserCoupons();
+
+        return view('smart_form.index', ['coupons' => $coupons, 'unused' => $unused]);
     }
 
     public function edit() {
@@ -25,6 +36,29 @@ class SmartFormController extends Controller
     }
 
     public function send(Request $request) {
-        dd($request->all());
+        $result = array_values($request->all());
+        $answer = new SmartFormUserAnswer();
+        $user_id = Auth::id();
+
+        if (count(auth()->user()->smartFormUserAnswers) !== 0) {
+            $answer->deleteSmartFormUserAnswer($user_id);
+        }
+
+        unset($result[0]);
+
+        if ($result[1] === 'true') {
+            $result[1] = 'false';
+        }
+
+        else {
+            $result[1] = 'true';
+        }
+
+        for ($element = 1; $element <= count($result); $element++) {
+            $question_id = $element;
+            $answer->createSmartFormUserAnswer($user_id, $question_id, $result[$element]);
+        }
+
+        return redirect()->route('smart-form');
     }
 }

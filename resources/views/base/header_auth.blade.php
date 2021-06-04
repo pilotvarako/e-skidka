@@ -3,7 +3,7 @@
         <a href="{{ route('index') }}"><img src="{{ asset('img/main/logo.svg') }}" alt="Logo"/></a>
     </div>
     <div class="user_profile">
-        <a href="{{ route('profile') }}"><img src="{{ asset('img/main/user_auth_logo.svg') }}" alt="Profile"/></a>
+        <a href="{{ route('index') }}"><img src="{{ asset('img/main/user_auth_logo.svg') }}" alt="Profile"/></a>
     </div>
     <div class="exit_profile">
         <a href="{{ route('get-logout') }}"><img src="{{ asset('img/main/exit_logo.svg') }}" alt="Exit"/></a>

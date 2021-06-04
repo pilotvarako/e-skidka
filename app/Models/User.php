@@ -44,4 +44,35 @@ class User extends Authenticatable
     public function smartFormUserAnswers() {
         return $this->hasMany(SmartFormUserAnswer::class);
     }
+
+    public static function findUserCoupons() {
+        $answers = auth()->user()->smartFormUserAnswers()->where('content', 1)->get();
+        $result_questions = array();
+
+        foreach ($answers as $answer) {
+            $result_questions[] = $answer->smartFormQuestion()->get();
+        }
+
+        $result_categories = array();
+
+        foreach ($result_questions as $question) {
+            $result_categories[] = $question[0]->category()->get();
+        }
+
+        $result_coupons = array();
+
+        foreach ($result_categories as $category) {
+            $result_coupons[] = $category[0]->coupons()->get();
+        }
+
+        $result = array();
+
+        foreach ($result_coupons as $coupons) {
+            foreach ($coupons as $coupon) {
+                $result[] = $coupon;
+            }
+        }
+
+        return $result;
+    }
 }

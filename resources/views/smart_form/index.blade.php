@@ -27,7 +27,7 @@
         <hr>
     </div>
     <div class="coupons_scope">
-        @forelse ($coupons as $coupon)
+        @foreach ($coupons as $coupon)
             <div class="item_coupon">
                 <div class="item_coupon_logo"><img src="{{ $coupon->image }}" alt="Image company"/></div>
                 <div class="item_coupon_name"><p>{{ $coupon->name }}</p></div>
@@ -41,13 +41,15 @@
                 @endguest
 
             </div>
-        @empty
-            <div class="coupons_empty"><h2>Ничего не найдено по вашему запросу :(</h2></div>
-        @endforelse
-    </div>
+        @endforeach
 
-    @empty ($search)
-        {{ $coupons->links() }}
-    @endempty
+        @if (empty($coupons) && !$unused)
+            <div class="coupons_empty"><h2>Ничего не найдено по вашему запросу :(</h2></div>
+        @endif
+
+        @if ($unused)
+            <div class="coupons_empty"><h2>Необходимо настроить форму!</h2></div>
+        @endif
+    </div>
 
 @endsection
