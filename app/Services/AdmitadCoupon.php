@@ -56,7 +56,7 @@ class AdmitadCoupon
         return $response->getArrayResult('results');
     }
 
-    public function getCoupons() {
+    public function getCoupons($limit) {
         $current_service = new InfoService();
         $current_service = $current_service->getLast();
         $website_id = $current_service['website_id'];
@@ -64,34 +64,16 @@ class AdmitadCoupon
         $name_method = '/coupons/website/' . $website_id . '/';
 
         try {
-            $response = $this->api->get($name_method);
+            $response = $this->api->get($name_method, array('limit' => $limit, 'offset' => 0));
         }
 
         catch (ApiException $ex) {
             $this->fixError($this->api->getLastResponse()->getArrayResult('error_code'));
-            $response = $this->api->get($name_method);
+            $response = $this->api->get($name_method, array('limit' => $limit, 'offset' => 0));
         }
 
         return $response->getArrayResult('results');
     }
-
-    /*public function getCoupon() {
-        $current_service = new InfoService();
-        $current_service = $current_service->getLast();
-        $website_id = $current_service['website_id'];
-
-        $name_method = '/coupons/376714/website/' . $website_id . '/';
-
-        try {
-            $response = $this->api->get($name_method);
-        }
-
-        catch (ApiException $ex) {
-            $this->fixError($this->api->getLastResponse()->getArrayResult('error_code'));
-        }
-
-        return $response->getArrayResult();
-    }*/
 
     private function fixError($error_code) {
         if ($error_code === 0) {
@@ -143,7 +125,7 @@ class AdmitadCoupon
         $result = array();
 
         foreach ($coupons as $coupon) {
-            if ($coupon['status'] === 'active' && $coupon['promocode'] === 'НЕ НУЖЕН') {
+            if ($coupon['status'] === 'active' && ($coupon['promocode'] === 'НЕ НУЖЕН' || $coupon['promocode'] === 'NOT REQUIRED')) {
                 $filter_coupon['id'] = $coupon['id'];
                 $filter_coupon['category_id'] = $coupon['categories'][0]['id'];
                 $filter_coupon['name_company'] = $coupon['campaign']['name'];

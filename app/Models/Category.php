@@ -16,4 +16,8 @@ class Category extends Model
     public function coupons() {
         return $this->hasMany(Coupon::class);
     }
+
+    public function smartFormQuestions() {
+        return $this->hasMany(SmartFormQuestion::class);
+    }
 }

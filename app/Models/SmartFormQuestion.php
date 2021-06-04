@@ -9,11 +9,15 @@ class SmartFormQuestion extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'content', 'positive', 'negative'];
+    protected $fillable = ['id', 'category_id', 'content', 'positive', 'negative'];
 
     public $incrementing = false;
 
     public function smartFormUserAnswers() {
         return $this->hasMany(SmartFormUserAnswer::class);
+    }
+
+    public function category() {
+        return $this->belongsTo(Category::class);
     }
 }
