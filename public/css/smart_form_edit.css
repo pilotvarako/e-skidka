@@ -1,6 +1,6 @@
 .smart_form_questions_scope {
     box-sizing: border-box;
-    height: 260px;
+    height: 720px;
     background-color: #AF4FFB;
 }
 
@@ -38,15 +38,18 @@
 .positive_answer label, .negative_answer label {
     display: inline-block;
     cursor: pointer;
-    padding: 0px 50px;
     line-height: 36px;
-    width: 50px;
+    width: 160px;
     border: 1px solid #000000;
     border-radius: 10px;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+}
+
+.positive_answer label p, .negative_answer label p {
+    text-align: center;
 }
 
 .positive_answer input[type=radio]:checked + label, .negative_answer input[type=radio]:checked + label {
@@ -56,7 +59,7 @@
 
 .positive_answer label:hover, .negative_answer label:hover {
     background: #000000;
-    color: #AF4FFB;
+    color: #FFFFFF;
 }
 
 .smart_form_send_scope {
@@ -69,7 +72,7 @@
 
 .smart_form_confirm button, .smart_form_cancel button {
     background-color: #000000;
-    color: #AF4FFB;
+    color: #FFFFFF;
     width: 300px;
     height: 50px;
     border: 1px solid #000000;

@@ -9,18 +9,20 @@
 @section('content')
     <div class="smart_form_questions_scope">
         <form method="POST" action="{{ route('smart-form-edit') }}">
+            @csrf
+            @foreach ($questions as $question)
             <div class="item_question">
-                @csrf
-                <div class="content"><p>test</p></div>
+                <div class="content"><p>{{ $question->content }}</p></div>
                 <div class="positive_answer">
-                    <input id="positive" type="radio" value="positive" name="test" required/>
-                    <label for="positive">positive</label>
+                    <input id="{{ $question->id }}" type="radio" value="true" name="{{ $question->category->name }}" required/>
+                    <label for="{{ $question->id }}"><p>{{ $question->positive }}</p></label>
                 </div>
                 <div class="negative_answer">
-                    <input id="negative" type="radio" value="negative" name="test" required/>
-                    <label for="negative">negative</label>
+                    <input id="{{ $question->id * 10 }}" type="radio" value="false" name="{{ $question->category->name }}" required/>
+                    <label for="{{ $question->id * 10 }}"><p>{{ $question->negative }}</p></label>
                 </div>
             </div>
+            @endforeach
             <div class="smart_form_send_scope">
                 <div class="smart_form_confirm"><button type="submit">Применить</button></div>
                 <div class="smart_form_cancel"><button type="reset">Отмена</button></div>
