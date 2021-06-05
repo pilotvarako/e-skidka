@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @prepend('meta')
-    <meta name="verify-admitad" content="d00efc34aa" />
+    <meta name="verify-admitad" content="8a9af13fc2" />
 @endprepend
 
 @prepend('css')
