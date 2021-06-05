@@ -20,4 +20,8 @@ class Category extends Model
     public function smartFormQuestions() {
         return $this->hasMany(SmartFormQuestion::class);
     }
+
+    public function getAllCategories() {
+        return Category::all();
+    }
 }

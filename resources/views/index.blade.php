@@ -6,6 +6,7 @@
 
 @prepend('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/coupon.css') }}"/>
 @endprepend
 
 @section('title', 'E-skidka')
@@ -21,7 +22,25 @@
         <div class="item_link"><img src="{{ asset('img/main/banner_link_coupon.svg') }}" alt="Icon link"/><p>Переходите на сайт магазина по купону</p></div>
     </div>
     <div class="items_shop">
-        <div class="item_shop"><p>Empty.</p></div>
+        <div class="coupons_scope">
+            @forelse ($coupons as $coupon)
+                <div class="item_coupon">
+                    <div class="item_coupon_logo"><img src="{{ $coupon->image }}" alt="Image company"/></div>
+                    <div class="item_coupon_name"><p>{{ $coupon->name }}</p></div>
+
+                    @auth
+                        <div class="item_coupon_link"><a href="{{ $coupon->link }}"><img src="{{ asset('img/coupons/link.svg') }}" alt="Link logo"/></a></div>
+                    @endauth
+
+                    @guest
+                        <div class="item_coupon_link"><a href="{{ route('login') }}"><img src="{{ asset('img/coupons/link.svg') }}" alt="Link logo"/></a></div>
+                    @endguest
+
+                </div>
+            @empty
+                <div class="coupons_empty"><h2>Пусто :(</h2></div>
+            @endforelse
+        </div>
         <div class="button_all_coupons">
             <a href="{{ route('coupons') }}"><button><img src="{{ asset('img/main/all_coupons_logo.svg') }}" alt="All coupons"/><p>Все купоны</p></button></a>
         </div>

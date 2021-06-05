@@ -5,7 +5,6 @@
 @prepend('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/smart_form.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/coupon.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}"/>
 @endprepend
 
 @section('content')

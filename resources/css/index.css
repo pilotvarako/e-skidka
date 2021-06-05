@@ -25,7 +25,7 @@
     margin-top: 150px;
 }
 
-.item_registry p, .item_coupon p, .item_link p {
+.item_registry p, .banner .item_coupon p, .item_link p {
     font-weight: bold;
 }
 
@@ -36,7 +36,7 @@
     margin-top: 155px;
 }
 
-.item_coupon {
+.banner .item_coupon {
     display: inline-block;
     position: absolute;
     margin-left: 320px;
@@ -66,26 +66,13 @@
 
 .items_shop {
     box-sizing: border-box;
-    width: 100%;
-    min-height: 320px;
-}
-
-.item_shop {
-    box-sizing: border-box;
-    width: 150px;
-    height: 150px;
-    border: 1px solid #AF4FFB;
-    margin-top: 50px;
-    margin-left: 775px;
-    padding: 50px;
-    font-weight: bold;
-    border-radius: 15px;
 }
 
 .button_all_coupons {
     box-sizing: border-box;
     margin-left: 750px;
-    margin-top: 90px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .button_all_coupons a {
