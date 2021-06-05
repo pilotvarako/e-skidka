@@ -1,6 +1,5 @@
 .smart_form_questions_scope {
     box-sizing: border-box;
-    height: 720px;
     background-color: #AF4FFB;
 }
 
@@ -67,7 +66,7 @@
 }
 
 .smart_form_confirm, .smart_form_cancel {
-    margin: 40px 100px 0px 400px;
+    margin: 40px 100px 20px 400px;
 }
 
 .smart_form_confirm button, .smart_form_cancel button {
