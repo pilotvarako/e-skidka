@@ -1,0 +1,77 @@
+.smart_form_questions_scope {
+    box-sizing: border-box;
+    background-color: #AF4FFB;
+}
+
+.smart_form_questions_scope form {
+    display: flex;
+    flex-direction: column;
+}
+
+.item_question {
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-top: 20px;
+    width: 800px;
+    height: 100px;
+    border-radius: 60px;
+}
+
+.item_question .content p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.positive_answer, .negative_answer {
+    display: inline-block;
+    margin: 8px 0px 0px 160px;
+}
+
+.positive_answer input[type=radio], .negative_answer input[type=radio] {
+    display: none;
+}
+
+.positive_answer label, .negative_answer label {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 36px;
+    width: 160px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.positive_answer label p, .negative_answer label p {
+    text-align: center;
+}
+
+.positive_answer input[type=radio]:checked + label, .negative_answer input[type=radio]:checked + label {
+    background: #AF4FFB;
+    color: #000000;
+}
+
+.positive_answer label:hover, .negative_answer label:hover {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.smart_form_send_scope {
+    display: flex;
+}
+
+.smart_form_confirm, .smart_form_cancel {
+    margin: 40px 100px 20px 400px;
+}
+
+.smart_form_confirm button, .smart_form_cancel button {
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 300px;
+    height: 50px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,37 @@
+.coupons_scope {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item_coupon {
+    margin: 20px;
+    border: 2px solid #AF4FFB;
+    border-radius: 25px;
+    width: 425px;
+}
+
+.item_coupon_logo, .item_coupon_name, .item_coupon_link {
+    margin: 15px;
+    text-align: center;
+}
+
+.item_coupon_name {
+    height: 75px
+}
+
+.item_coupon_name p {
+    font-size: 20px;
+}
+
+.coupons_empty {
+    box-sizing: border-box;
+    height: 200px;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+.coupons_empty h2 {
+    color: #AF4FFB;
+}
+

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\CouponController;
+use App\Http\Controllers\SmartFormController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +17,17 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('/', [MainController::class, 'index']);
-Route::get('/coupons', [MainController::class, 'plug']);
-Route::get('/smart-form', [MainController::class, 'plug']);
-Route::get('/registration', [MainController::class, 'plug']);
-Route::get('/authorization', [MainController::class, 'plug']);
-Route::get('/profile', [MainController::class, 'plug']);
+Auth::routes([
+    'reset' => false,
+    'confirm' => false,
+    'verify' => false,
+]);
+
+Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/coupons', [CouponController::class, 'index'])->name('coupons');
+Route::post('/coupons', [CouponController::class, 'search'])->name('coupons');
+Route::get('/smart-form', [SmartFormController::class, 'index'])->name('smart-form');
+Route::get('/smart-form/edit', [SmartFormController::class, 'edit'])->name('smart-form-edit');
+Route::post('/smart-form/edit', [SmartFormController::class, 'send'])->name('smart-form-edit');
+
+Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('get-logout');

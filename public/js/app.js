@@ -19087,10 +19087,36 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
-/***/ "./resources/css/index.css":
-/*!*********************************!*\
-  !*** ./resources/css/index.css ***!
-  \*********************************/
+/***/ "./resources/css/coupon.css":
+/*!**********************************!*\
+  !*** ./resources/css/coupon.css ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/smart_form.css":
+/*!**************************************!*\
+  !*** ./resources/css/smart_form.css ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/smart_form_edit.css":
+/*!*******************************************!*\
+  !*** ./resources/css/smart_form_edit.css ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -19104,6 +19130,71 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
   \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/base.css":
+/*!********************************!*\
+  !*** ./resources/css/base.css ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/index.css":
+/*!*********************************!*\
+  !*** ./resources/css/index.css ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/register.css":
+/*!************************************!*\
+  !*** ./resources/css/register.css ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/login.css":
+/*!*********************************!*\
+  !*** ./resources/css/login.css ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/coupons.css":
+/*!***********************************!*\
+  !*** ./resources/css/coupons.css ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -19417,8 +19508,15 @@ process.umask = function() { return 0; };
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/coupons": 0,
+/******/ 			"css/login": 0,
+/******/ 			"css/register": 0,
+/******/ 			"css/index": 0,
+/******/ 			"css/base": 0,
 /******/ 			"css/app": 0,
-/******/ 			"css/index": 0
+/******/ 			"css/smart_form_edit": 0,
+/******/ 			"css/smart_form": 0,
+/******/ 			"css/coupon": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -19466,9 +19564,16 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/index"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app","css/index"], () => (__webpack_require__("./resources/css/index.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app","css/index"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/base.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/index.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/register.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/login.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/coupons.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/coupon.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/smart_form.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/smart_form_edit.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/coupons","css/login","css/register","css/index","css/base","css/app","css/smart_form_edit","css/smart_form","css/coupon"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

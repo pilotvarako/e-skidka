@@ -1,0 +1,24 @@
+.smart_form_header_scope {
+    box-sizing: border-box;
+    height: 120px;
+    background-color: #AF4FFB;
+    display: flex;
+}
+
+.smart_form_logo {
+    padding: 20px 0px 0px 40px;
+}
+
+.button_edit_smart_form {
+    margin: 35px 0px 0px 40px;
+}
+
+.button_edit_smart_form button {
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 600px;
+    height: 50px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+}
