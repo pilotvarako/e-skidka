@@ -17,7 +17,7 @@
         <div class="banner_logo"><img src="{{ asset('img/main/banner_main_logo.svg') }}" alt="Main banner"/></div>
         <div class="item_registry"><img src="{{ asset('img/main/banner_registry.svg') }}" alt="Logo registry"/><p>Регистрируйтесь</p></div>
         <div class="item_pointer_first"><img src="{{ asset('img/main/banner_icon_right.svg') }}" alt="Icon right"/></div>
-        <div class="item_coupon"><img src="{{ asset('img/main/banner_click_logo.svg') }}" alt="Icon click"/><p>Выбирайте купон</p></div>
+        <div class="item_coupon_banner"><img src="{{ asset('img/main/banner_click_logo.svg') }}" alt="Icon click"/><p>Выбирайте купон</p></div>
         <div class="item_pointer_second"><img src="{{ asset('img/main/banner_icon_right.svg') }}" alt="Icon right"/></div>
         <div class="item_link"><img src="{{ asset('img/main/banner_link_coupon.svg') }}" alt="Icon link"/><p>Переходите на сайт магазина по купону</p></div>
     </div>
