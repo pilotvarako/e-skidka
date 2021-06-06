@@ -5,7 +5,7 @@
 @endprepend
 
 @prepend('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index_main.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/coupon.css') }}"/>
 @endprepend
 

@@ -1,1 +1,71 @@
-.register_scope{box-sizing:border-box;height:700px;background-color:#af4ffb}.register_scope .title_logo{padding-left:810px;padding-top:25px}.register_scope .title_name{padding-top:25px;padding-left:770px}.form_scope_register .email,.form_scope_register .name,.form_scope_register .password,.form_scope_register .password_confirmation{padding-top:30px;padding-left:700px}.form_scope_register input::-moz-placeholder{color:#fff}.form_scope_register input:-ms-input-placeholder{color:#fff}.form_scope_register input::placeholder{color:#fff}.form_scope_register input:focus::-moz-placeholder{color:transparent}.form_scope_register input:focus:-ms-input-placeholder{color:transparent}.form_scope_register input:focus::placeholder{color:transparent}.form_scope_register input{background-color:#000;color:#fff;margin-top:10px;width:275px;height:50px;border:1px solid #000;outline:none;padding-left:10px}.register_confirm{padding-left:690px}.register_confirm button{margin-top:50px;background-color:#000;color:#fff;width:300px;height:50px;border:1px solid #000;border-radius:20px;cursor:pointer}
+.register_scope {
+    box-sizing: border-box;
+    height: 700px;
+    background-color: #AF4FFB;
+}
+
+.register_scope .title_logo {
+    padding-left: 810px;
+    padding-top: 25px;
+}
+
+.register_scope .title_name {
+    padding-top: 25px;
+    padding-left: 770px;
+}
+
+.form_scope_register .name, .form_scope_register .email, .form_scope_register .password, .form_scope_register .password_confirmation {
+    padding-top: 30px;
+    padding-left: 700px;
+}
+
+.form_scope_register input::-moz-placeholder {
+    color: #FFFFFF;
+}
+
+.form_scope_register input:-ms-input-placeholder {
+    color: #FFFFFF;
+}
+
+.form_scope_register input::placeholder {
+    color: #FFFFFF;
+}
+
+.form_scope_register input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+.form_scope_register input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+.form_scope_register input:focus::placeholder {
+    color: transparent;
+}
+
+.form_scope_register input {
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-top: 10px;
+    width: 275px;
+    height: 50px;
+    border: 1px solid #000000;
+    outline:none;
+    padding-left: 10px;
+}
+
+.register_confirm {
+    padding-left: 690px;
+}
+
+.register_confirm button {
+    margin-top: 50px;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 300px;
+    height: 50px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
